@@ -42,15 +42,19 @@
 			<dependency>
 				<groupId>org.flywaydb</groupId>
 				<artifactId>flyway-core</artifactId>
-				<version>7.7.0</version> <!-- Versão atual do Flyway -->
-			</dependency>
 
-			<!-- Dependência do driver JDBC para o MySQL -->
-			<dependency>
-				<groupId>mysql</groupId>
-				<artifactId>mysql-connector-java</artifactId>
-				<version>8.0.26</version> <!-- Versão atual do driver MySQL -->
 			</dependency>
+			<dependency>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-mysql</artifactId>
+			</dependency>
+			<!-- Dependência do driver JDBC para o MySQL -->
+		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>8.4.0</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>

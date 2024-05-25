@@ -1,11 +1,13 @@
 package com.joaovbrocchi.bancopopular.dto;
 
+import com.joaovbrocchi.bancopopular.domain.pix.TiposDeChavePix;
+
 public record InclusaoDTO(
-        String tipoChave,
+        TiposDeChavePix tipoChave,
         String valorChave,
         String tipoConta,
         int numeroAgencia,
-        int numeroConta,
+        String  numeroConta,
         String nomeCorrentista,
         String sobrenomeCorrentista
 ) {}

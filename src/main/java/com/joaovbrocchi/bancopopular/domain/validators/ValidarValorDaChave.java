@@ -1,5 +1,7 @@
 package com.joaovbrocchi.bancopopular.domain.validators;
 
-public class ValidarValorDaChave {
-    void checarSeOValorJaFoiCadasrado(){};
+public interface ValidarValorDaChave {
+    public boolean checarSeOValorJaFoiCadasrado();
+
+    public boolean validarValor();
 }

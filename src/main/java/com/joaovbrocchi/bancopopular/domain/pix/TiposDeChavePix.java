@@ -1,9 +1,9 @@
 package com.joaovbrocchi.bancopopular.domain.pix;
 
 public enum TiposDeChavePix {
-    Cpf,
+    cpf,
     celular,
-    Cnpj,
+    cnpj,
     email,
     chaveAleatoria
 }

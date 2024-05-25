@@ -1,17 +1,28 @@
 package com.joaovbrocchi.bancopopular.controller;
 
+import com.joaovbrocchi.bancopopular.domain.service.PixService;
 import com.joaovbrocchi.bancopopular.dto.InclusaoDTO;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
 
 @RestController
-@RequestMapping(path = "/pix")
+@RequestMapping(path = "/pix/chave")
 public class PixController {
 
-    @PostMapping("/inclusao")
-    public void rotaParaInclusaoDeChave(@RequestBody InclusaoDTO dados) {
-        // Lógica para lidar com a inclusão da chave PIX
+    private final PixService pixService;
+
+    @Autowired
+    public PixController(PixService pixService) {
+        this.pixService = pixService;
+    }
+
+    @PostMapping
+    public ResponseEntity<UUID> rotaParaInclusaoDeChave(@RequestBody InclusaoDTO dados) {
+        UUID idDaNovaChave = pixService.criarChavePix(dados);  // Chame o método do serviço para processar a inclusão
+        return new ResponseEntity<>(idDaNovaChave, HttpStatus.CREATED);
     }
 }
