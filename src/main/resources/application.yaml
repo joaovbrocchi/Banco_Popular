@@ -1,0 +1,29 @@
+server:
+  port: 8123
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+  api-docs:
+    enabled: true   # Habilita a geração automática da documentação OpenAPI
+    path: /v3/api-docs  # Define o caminho para a documentação OpenAPI
+
+spring:
+  name: bancopopular
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/plataforma-curso
+    username: springstudent
+    password: springstudent
+  main:
+    banner-mode: off
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
