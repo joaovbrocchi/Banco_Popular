@@ -13,14 +13,13 @@ public class OpenApiConfig {
     OpenAPI customOpenaAPI(){
         return new OpenAPI()
                 .info(new Info()
-                        .title("api plataforma curso")
+                        .title("Chaves Pix Banco Popular")
                         .version("v1")
-                        .description("uma api de uma plataforma de venda de cursos")
-                        .termsOfService("https://github.com/joaovbrocchi/javaApi")
+                        .description("api de controle das chaves pix do Banco Popular")
+                        .termsOfService("https://github.com/joaovbrocchi/Banco_Popular")
                         .license(new License().name("Joaovbrocchi")
                                 .url("https://github.com/joaovbrocchi")
                         )
-
                 );
     }
 }
