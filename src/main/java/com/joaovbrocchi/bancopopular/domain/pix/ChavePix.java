@@ -27,8 +27,20 @@ public class ChavePix {
     @Column(name = "valor-chave-pix")
     private String valorDaChavePix;
 
+    @Column(name = "tipo-conta")
+    private TiposDeConta tipoDeConta;
+
+    @Column(name= "numero-agencia")
+    private String numeroDaAgencia;
+
     @Column(name = "numero-conta-que-pertence")
     private String  numeroDaContaQueAChavePertence;
+
+    @Column(name = "nome-correntista")
+    private String primeiroNomeCorrentista;
+
+    @Column(name = "sobrenome-corentista")
+    private String sobrenomeCorrentista;
 
     @Column(name = "created_at")
     private LocalDateTime createdAt; // Adicione o campo createdAt

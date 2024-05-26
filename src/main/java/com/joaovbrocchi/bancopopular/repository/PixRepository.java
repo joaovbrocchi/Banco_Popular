@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Repository
-public interface PixRepository extends JpaRepository<ChavePix, UUID> {
+public interface PixRepository extends JpaRepository<ChavePix, UUID>, CustomPixRepository {
     Optional<ChavePix> findByValorDaChavePix(String valorDaChavePix);
 
     Optional<List<ChavePix>> findAllByNumeroDaContaQueAChavePertence(String numeroConta);
